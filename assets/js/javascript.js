@@ -75,7 +75,7 @@ function renderGifs(that){
                     var gifDiv = $('<div>');
                     gifDiv.addClass("item-"+i);
                     gifDiv.addClass("col-lg-3");
-                    gifDiv.attr('data-state',animate);
+                    gifDiv.attr('data-state','animate');
                     //has a rating for the result
                     var rating = results[i].rating;
                     //creates p tag that would display rating
@@ -97,7 +97,7 @@ $(document.body).on('click','.gif', function() {
     
     // how we find the gif we're looking for
        
-$("gifsAppearHere").empty();
+//$(document).("gifsAppearHere").empty();
 var p = $(this).data('name');
                     
     renderGifs(p);
@@ -108,7 +108,7 @@ var p = $(this).data('name');
 
 // pauses/starts gyphs that were created
 
-$(document.body).on('click',.item, function(){
+$(document).on('click',".item", function(){
                      var state = $(this).attr('data-state')
 
             if (state=='still'){
